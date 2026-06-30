@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+
+    <title>formulario</title>
+</head>
+<body>
+<h1>Formulario</h1>
+<!-- formulario-->
+<form th:action="@{/guardar}" method="post" th:object="${usuario}">
+    <div class="mb-3">
+        <label for="codigo" class="form-label">Código Producto</label>
+        <input type="text" class="form-control" id="codigo" th:field="*{id}">
+    </div>
+    <div class="mb-3">
+        <label for="nombreUsuario" class="form-label">Nombre usuario</label>
+        <input type="text" class="form-control" id="nombreUsuario" th:field="*{nombre}">
+    </div>
+    <div class="mb-3">
+        <label for="cedula" class="form-label">cedula</label>
+        <input type="text" class="form-control" id="cedula" th:field="*{cedula}">
+    </div>
+    <div class="mb-3">
+        <label for="compra" class="form-label">compra</label>
+        <input type="text" class="form-control" id="compra" th:field="*{compra}">
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+
+
+</body>
+</html>
