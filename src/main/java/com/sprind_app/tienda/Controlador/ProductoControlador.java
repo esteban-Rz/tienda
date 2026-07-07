@@ -48,7 +48,7 @@ public class ProductoControlador {
     @GetMapping ("/eliminar/{id}")
     public  String eliminarProducto (@PathVariable Long id){
         productoServicio.eliminarProducto(id);
-        return "rendirect: /productos";
+        return "redirect:/productos";
     }
 
 }
